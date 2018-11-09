@@ -1,0 +1,31 @@
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Challenge_1.exe.config
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Challenge_1.exe
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Challenge_1.pdb
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.csprojAssemblyReference.cache
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.csproj.CoreCompileInputs.cache
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.csproj.CopyComplete
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.exe
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.pdb
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Challenge_1.exe.config
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Challenge_1.exe
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Challenge_1.pdb
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.csprojAssemblyReference.cache
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.csproj.CoreCompileInputs.cache
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.csproj.CopyComplete
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.exe
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.pdb
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.csprojResolveAssemblyReference.cache
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.csproj.CoreCompileInputs.cache
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.exe
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_1\obj\Debug\Challenge_1.pdb

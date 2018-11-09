@@ -1,0 +1,14 @@
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_4\bin\Debug\Challenge_4.exe.config
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_4\bin\Debug\Challenge_4.exe
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_4\bin\Debug\Challenge_4.pdb
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.csprojAssemblyReference.cache
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.csproj.CoreCompileInputs.cache
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.exe
+C:\DotNetProjects\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.pdb
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\bin\Debug\Challenge_4.exe.config
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\bin\Debug\Challenge_4.exe
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\bin\Debug\Challenge_4.pdb
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.csprojAssemblyReference.cache
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.csproj.CoreCompileInputs.cache
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.exe
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.pdb

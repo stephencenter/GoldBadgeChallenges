@@ -1,0 +1,6 @@
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_7\bin\Debug\Challenge_7.exe.config
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_7\bin\Debug\Challenge_7.exe
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_7\bin\Debug\Challenge_7.pdb
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_7\obj\Debug\Challenge_7.csproj.CoreCompileInputs.cache
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_7\obj\Debug\Challenge_7.exe
+C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_7\obj\Debug\Challenge_7.pdb
