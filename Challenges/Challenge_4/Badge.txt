@@ -25,9 +25,9 @@ show a list with all badge numbers and door access, like this:
 
 Key
 Badge #			 Door Access       
-1				 a1, a5, d4			 
-2				 a1, a4, b1, b2		 
-3				 a4, a5				
+1				 a1, a5, d4
+2				 a1, a4, b1, b2
+3				 a4, a5
 
 Out of scope:
 You do not need to consider tying an individual badge to a particular user. Just the Badge # will do.

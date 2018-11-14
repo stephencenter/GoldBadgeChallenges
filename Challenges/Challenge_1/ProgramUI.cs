@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace Challenge_1 {
 
     class ProgramUI {
-        MenuRepository mrep = new MenuRepository();
-        private const string divider = "-------------------------";
+        MenuRepository menurepo = new MenuRepository();
+        private string divider = new string('-', 25);
 
         public void Run() {
             Console.WriteLine("Welcome to Komodo Cafe's patented Menu Management System!");
@@ -39,7 +39,7 @@ namespace Challenge_1 {
                     }
 
                     if (choice == "2") {
-                        if (mrep.GetList().Count > 0) {
+                        if (menurepo.GetList().Count > 0) {
                             RemoveOption();
                         }
 
@@ -53,7 +53,7 @@ namespace Challenge_1 {
                     }
 
                     if (choice == "3") {
-                        if (mrep.GetList().Count > 0) {
+                        if (menurepo.GetList().Count > 0) {
                             ViewOptionSimple();
                         }
 
@@ -67,7 +67,7 @@ namespace Challenge_1 {
                     }
 
                     if (choice == "4") {
-                        if (mrep.GetList().Count > 0) {
+                        if (menurepo.GetList().Count > 0) {
                             ViewOptionVerbose();
                         }
 
@@ -98,7 +98,7 @@ namespace Challenge_1 {
             List<string> ingredients = AddIngredients();
             Console.WriteLine(divider);
 
-            mrep.AddMenuItem(new MenuItem(name, desc, price, ingredients));
+            menurepo.AddMenuItem(new MenuItem(name, desc, price, ingredients));
 
             Console.WriteLine($"{name} has been added to the menu.");
             Input("Press enter/return ");
@@ -109,7 +109,7 @@ namespace Challenge_1 {
             Console.WriteLine("Choose a menu item: ");
 
             int counter = 1;
-            foreach (MenuItem menu_item in mrep.GetList()) {
+            foreach (MenuItem menu_item in menurepo.GetList()) {
                 Console.WriteLine($"      [{counter}] {menu_item.Name}");
                 counter++;
             }
@@ -123,12 +123,12 @@ namespace Challenge_1 {
                     return;
                 }
 
-                if (chosen_num > mrep.GetList().Count || chosen_num < 0) {
+                if (chosen_num > menurepo.GetList().Count || chosen_num < 0) {
                     continue;
                 }
 
-                MenuItem removed_item = mrep.GetList()[chosen_num];
-                mrep.RemoveMenuItem(removed_item);
+                MenuItem removed_item = menurepo.GetList()[chosen_num];
+                menurepo.RemoveMenuItem(removed_item);
 
                 Console.WriteLine(divider);
                 Console.WriteLine($"{removed_item.Name} has been removed.");
@@ -143,7 +143,7 @@ namespace Challenge_1 {
             Console.WriteLine("Komodo Cafe Menu: ");
 
             int counter = 1;
-            foreach (MenuItem menu_item in mrep.GetList()) {
+            foreach (MenuItem menu_item in menurepo.GetList()) {
                 Console.WriteLine($"  #{counter}: {menu_item.Name} | 1 @ ${menu_item.Price}");
                 counter++;
             }
@@ -156,7 +156,7 @@ namespace Challenge_1 {
             Console.WriteLine("Komodo Cafe Menu: ");
 
             int counter = 1;
-            foreach (MenuItem menu_item in mrep.GetList()) {
+            foreach (MenuItem menu_item in menurepo.GetList()) {
                 Console.WriteLine($"  #{counter}: {menu_item.Name} | 1 @ ${menu_item.Price}");
                 Console.WriteLine($"    \"{menu_item.Description}\"");
                 Console.WriteLine($"\n    Ingredients: ");

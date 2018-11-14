@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Challenge_2 {
     class ProgramUI {
         ClaimRepository claimrepo = new ClaimRepository();
-        private const string divider = "-------------------------";
+        private string divider = new String('-', 25);
 
         public void Run() {
             Console.WriteLine("Welcome to the Komodo Claims Department!");
@@ -20,7 +20,6 @@ namespace Challenge_2 {
         }
 
         public int GetMax(int a, int b) {
-            // Returns the larger of two ints
             if (a > b) {
                 return a;
             }
@@ -195,6 +194,8 @@ namespace Challenge_2 {
             }
             Console.WriteLine();
             Input("Press enter/return when you're finished viewing this list");
+            
+
         }
 
     }

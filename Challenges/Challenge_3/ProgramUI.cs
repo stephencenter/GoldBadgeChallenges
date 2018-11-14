@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Challenge_3 {
     class ProgramUI {
-        private string divider = new String('-', 25);
         private OutingRepository outingrepo = new OutingRepository();
+        private string divider = new String('-', 25);
 
         public void Run() {
             Console.WriteLine("Welcome to Komodo Enterprise's patended Outing Management System!");
@@ -17,14 +17,6 @@ namespace Challenge_3 {
         public string Input(string prompt) {
             Console.Write(prompt);
             return Console.ReadLine();
-        }
-
-        public int GetMax(int a, int b) {
-            if (a > b) {
-                return a;
-            }
-
-            return b;
         }
 
         public void ChooseAnOption() {
