@@ -32,7 +32,3 @@ Badge #			 Door Access
 Out of scope:
 You do not need to consider tying an individual badge to a particular user. Just the Badge # will do.
 
-Be sure to Unit Test your Repository methods.
-
-
-

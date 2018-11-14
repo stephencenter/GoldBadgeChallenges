@@ -20,6 +20,3 @@ Here's what they'd like:
 	They'd like to see a display of outing costs by type.
 		For example, all bowling outings for the year were $2000.00.
 		All Concert outings cost $5000.00.
-
-
-Be sure to Unit Test your Repository methods.

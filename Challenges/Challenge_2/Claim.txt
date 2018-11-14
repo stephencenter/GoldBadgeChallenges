@@ -56,6 +56,5 @@ Your goal is to do the following:
 
 1. Create a Claim class with properties, constructors, and any necessary fields.
 2. Create a ClaimRepository class that has proper methods.
-3. Create a Test Class for your repository methods.
-4. Create a Program file that allows a claims manager to manage items in a list of claims.
+3. Create a Program file that allows a claims manager to manage items in a list of claims.
  

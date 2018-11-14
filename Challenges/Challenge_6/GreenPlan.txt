@@ -19,6 +19,4 @@ for the car, and delete it from the Electric Car list.
 
 They could also see a full list of Electric cars that have been added. 
 They can do the same thing for Gas Cars and Hybrid Cars with the
-eventual hope that the collected data will help with various comparisons. 
-
-Be sure to Unit Test your code.
+eventual hope that the collected data will help with various comparisons.
