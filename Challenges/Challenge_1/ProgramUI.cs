@@ -8,7 +8,7 @@ namespace Challenge_1 {
 
     class ProgramUI {
         MenuRepository menurepo = new MenuRepository();
-        private string divider = new string('-', 25);
+        private string divider = new String('-', 25);
 
         public void Run() {
             Console.WriteLine("Welcome to Komodo Cafe's patented Menu Management System!");

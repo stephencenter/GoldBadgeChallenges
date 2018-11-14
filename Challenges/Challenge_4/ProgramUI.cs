@@ -151,11 +151,10 @@ namespace Challenge_4 {
         // Grants a badge the ability to open a specific door
         private void AddDoorToBadgeOption() {
             int current_key = ChooseABadgeKey();
-            string new_door;
             Console.WriteLine(divider);
 
             while (true) {
-                new_door = Input($"What new door# should badge #{current_key} be able to access? ");
+                string new_door = Input($"What new door# should badge #{current_key} be able to access? ");
 
                 if (badgerepo.GetDictionary()[current_key].Contains(new_door)) {
                     Console.WriteLine($"\nBadge #{current_key} can already open that door.");
@@ -164,14 +163,12 @@ namespace Challenge_4 {
                 }
 
                 else {
-                    break;
+                    badgerepo.AddValueToDict(current_key, new_door);
+                    Console.WriteLine($"\nBadge #{current_key} can now open door #{new_door}.");
+                    Input("Press enter/return ");
+                    return;
                 }
             }
-
-            badgerepo.AddValueToDict(current_key, new_door);
-
-            Console.WriteLine($"\nBadge #{current_key} can now open door #{new_door}.");
-            Input("Press enter/return ");
         }
 
         // Takes away the ability for a badge to open a specific door
@@ -188,6 +185,8 @@ namespace Challenge_4 {
 
                 if (badgerepo.GetDictionary()[current_key].Contains(to_remove)) {
                     badgerepo.RemoveValueFromDict(current_key, to_remove);
+                    Console.WriteLine($"\nBadge #{current_key} can no longer open door #{to_remove}.");
+                    Input("Press enter/return ");
                     return;
                 }
 
