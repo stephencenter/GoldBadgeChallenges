@@ -12,3 +12,10 @@ C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge
 C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_2\obj\Debug\Challenge_2.csproj.CoreCompileInputs.cache
 C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_2\obj\Debug\Challenge_2.exe
 C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_2\obj\Debug\Challenge_2.pdb
+D:\Documents\Gold Badge Challenges\Challenge_2\obj\Debug\Challenge_2.csprojAssemblyReference.cache
+D:\Documents\Gold Badge Challenges\Challenge_2\obj\Debug\Challenge_2.csproj.CoreCompileInputs.cache
+D:\Documents\Gold Badge Challenges\Challenge_2\obj\Debug\Challenge_2.exe
+D:\Documents\Gold Badge Challenges\Challenge_2\obj\Debug\Challenge_2.pdb
+D:\Documents\Gold Badge Challenges\Challenge_2\bin\Debug\Challenge_2.exe.config
+D:\Documents\Gold Badge Challenges\Challenge_2\bin\Debug\Challenge_2.exe
+D:\Documents\Gold Badge Challenges\Challenge_2\bin\Debug\Challenge_2.pdb

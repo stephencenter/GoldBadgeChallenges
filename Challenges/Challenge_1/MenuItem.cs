@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace Challenge_1 {
 
-    class MenuItem {
+    public class MenuItem {
         public string Name { get; set; }
         public string Description { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
         public List<string> Ingredients { get; set; }
 
-        public MenuItem(string name, string description, int price, List<string> ingredients) {
+        public MenuItem(string name, string description, double price, List<string> ingredients) {
             Name = name;
             Description = description;
             Price = price;
             Ingredients = ingredients;
+        }
+
+        public MenuItem() {
 
         }
 

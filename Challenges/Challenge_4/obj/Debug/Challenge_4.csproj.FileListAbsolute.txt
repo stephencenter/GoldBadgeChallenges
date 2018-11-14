@@ -12,3 +12,9 @@ C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge
 C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.csproj.CoreCompileInputs.cache
 C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.exe
 C:\Users\jtuk9\Downloads\Dot-NET-152-Challenges\Dot-NET-152-Challenges\Challenge_4\obj\Debug\Challenge_4.pdb
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_4\bin\Debug\Challenge_4.exe.config
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_4\bin\Debug\Challenge_4.exe
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_4\bin\Debug\Challenge_4.pdb
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_4\obj\Debug\Challenge_4.csproj.CoreCompileInputs.cache
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_4\obj\Debug\Challenge_4.exe
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_4\obj\Debug\Challenge_4.pdb
