@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Challenge_1 {
-
     class ProgramUI {
         MenuRepository menurepo = new MenuRepository();
         private string divider = new String('-', 25);

@@ -11,3 +11,4 @@ C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_5\bi
 C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_5\obj\Debug\Challenge_5.csproj.CoreCompileInputs.cache
 C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_5\obj\Debug\Challenge_5.exe
 C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_5\obj\Debug\Challenge_5.pdb
+C:\Users\Eleven Fifty\Downloads\Dot-NET-152-Challenges\Challenges\Challenge_5\obj\Debug\Challenge_5.csprojAssemblyReference.cache

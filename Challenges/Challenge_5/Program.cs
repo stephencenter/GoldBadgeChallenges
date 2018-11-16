@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Challenge_5
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace Challenge_5 {
+    class Program {
+        static void Main(string[] args) {
+            ProgramUI program_ui = new ProgramUI();
+            program_ui.Run();
         }
     }
 }

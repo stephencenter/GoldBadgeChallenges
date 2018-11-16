@@ -103,7 +103,6 @@ namespace Challenge_4 {
                         System.Environment.Exit(1);
                     }
                 }
-
             }
         }
 
