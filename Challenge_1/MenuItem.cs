@@ -19,10 +19,5 @@ namespace Challenge_1 {
             Price = price;
             Ingredients = ingredients;
         }
-
-        public MenuItem()
-        {
-
-        }
     }
 }

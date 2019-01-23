@@ -2,36 +2,36 @@
 
 namespace Challenge_4
 {
-    class BadgeRepository
+    public static class BadgeRepository
     {
-        private Dictionary<int, List<string>> badge_dict = new Dictionary<int, List<string>>();
+        private static Dictionary<int, List<string>> badge_dict = new Dictionary<int, List<string>>();
 
-        public void AddNewKeyToDict(int key)
+        public static void AddNewKeyToDict(int key)
         {
             badge_dict[key] = new List<string>();
         }
 
-        public void RemoveKeyFromDict(int key)
+        public static void RemoveKeyFromDict(int key)
         {
             badge_dict.Remove(key);
         }
 
-        public void AddValueToDict(int key, string doornum)
+        public static void AddValueToDict(int key, string doornum)
         {
             badge_dict[key].Add(doornum);
         }
 
-        public void RemoveValueFromDict(int key, string doornum)
+        public static void RemoveValueFromDict(int key, string doornum)
         {
             badge_dict[key].Remove(doornum);
         }
 
-        public Dictionary<int, List<string>> GetDictionary()
+        public static Dictionary<int, List<string>> GetDictionary()
         {
             return badge_dict;
         }
 
-        public bool DoesDictHaveKeys()
+        public static bool DoesDictHaveKeys()
         {
             return badge_dict.Count > 0;
         }

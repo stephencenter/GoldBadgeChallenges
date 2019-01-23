@@ -2,10 +2,10 @@
 
 namespace Challenge_3
 {
-    public enum EventType { Golf, Bowling, AmusementPark, Concert }
-
-    class Outing
+    public class Outing
     {
+        public enum EventType { Golf, Bowling, AmusementPark, Concert }
+
         public EventType TypeOfEvent { get; set; }
         public DateTime DateOfEvent { get; set; }
         public int NumAttendees { get; set; }

@@ -2,24 +2,23 @@
 
 namespace Challenge_4
 {
-    class ProgramUI
+    public static class ProgramUI
     {
-        BadgeRepository badgerepo = new BadgeRepository();
-        private readonly string divider = new string('-', 25);
+        private static readonly string divider = new string('-', 25);
 
-        public void Run()
+        public static void Run()
         {
             Console.WriteLine("Welcome to Komodo Security's Badge Management System!");
             ChooseAnOption();
         }
 
-        public string Input(string prompt)
+        public static string Input(string prompt)
         {
             Console.Write(prompt);
             return Console.ReadLine();
         }
 
-        private void ChooseAnOption()
+        private static void ChooseAnOption()
         {
             while (true)
             {
@@ -47,7 +46,7 @@ namespace Challenge_4
                     {
                         Console.WriteLine(divider);
 
-                        if (badgerepo.DoesDictHaveKeys())
+                        if (BadgeRepository.DoesDictHaveKeys())
                         {
                             AddDoorToBadgeOption();
                         }
@@ -65,7 +64,7 @@ namespace Challenge_4
                     {
                         Console.WriteLine(divider);
 
-                        if (badgerepo.DoesDictHaveKeys())
+                        if (BadgeRepository.DoesDictHaveKeys())
                         {
                             RemoveDoorFromBadgeOption();
                         }
@@ -83,7 +82,7 @@ namespace Challenge_4
                     {
                         Console.WriteLine(divider);
 
-                        if (badgerepo.DoesDictHaveKeys())
+                        if (BadgeRepository.DoesDictHaveKeys())
                         {
                             DeleteBadgeOption();
                         }
@@ -101,7 +100,7 @@ namespace Challenge_4
                     {
                         Console.WriteLine(divider);
 
-                        if (badgerepo.DoesDictHaveKeys())
+                        if (BadgeRepository.DoesDictHaveKeys())
                         {
                             ViewAllBadgesOption();
                         }
@@ -125,11 +124,11 @@ namespace Challenge_4
 
         // Lists all the available badges, asks the user to choose one, and returns the badge #.
         // Used by multiple methods.
-        private int ChooseBadgeKey()
+        private static int ChooseBadgeKey()
         {
             Console.WriteLine("Choose a badge #: ");
 
-            foreach (int key in badgerepo.GetDictionary().Keys)
+            foreach (int key in BadgeRepository.GetDictionary().Keys)
             {
                 Console.WriteLine($"      [{key}]");
             }
@@ -138,7 +137,7 @@ namespace Challenge_4
             {
                 int chosen = int.Parse(Input("Input [#]: "));
 
-                if (badgerepo.GetDictionary().ContainsKey(chosen))
+                if (BadgeRepository.GetDictionary().ContainsKey(chosen))
                 {
                     return chosen;
                 }
@@ -146,7 +145,7 @@ namespace Challenge_4
         }
 
         // Create a new badge. This badge cannot open any doors until the user chooses to add a door to it.
-        private void CreateBadgeOption()
+        private static void CreateBadgeOption()
         {
             int badge_id;
 
@@ -154,7 +153,7 @@ namespace Challenge_4
             {
                 badge_id = int.Parse(Input("Give an ID# to this badge: "));
 
-                if (badgerepo.GetDictionary().ContainsKey(badge_id))
+                if (BadgeRepository.GetDictionary().ContainsKey(badge_id))
                 {
                     Console.WriteLine("\nA badge with that ID already exists.");
                     Input("Press enter/return ");
@@ -167,13 +166,13 @@ namespace Challenge_4
                 }
             }
 
-            badgerepo.AddNewKeyToDict(badge_id);
+            BadgeRepository.AddNewKeyToDict(badge_id);
             Console.WriteLine("\nYour badge has been created!");
             Input("Press enter/return ");
         }
 
         // Grants a badge the ability to open a specific door
-        private void AddDoorToBadgeOption()
+        private static void AddDoorToBadgeOption()
         {
             int current_key = ChooseBadgeKey();
             Console.WriteLine(divider);
@@ -182,7 +181,7 @@ namespace Challenge_4
             {
                 string new_door = Input($"What new door# should badge #{current_key} be able to access? ");
 
-                if (badgerepo.GetDictionary()[current_key].Contains(new_door))
+                if (BadgeRepository.GetDictionary()[current_key].Contains(new_door))
                 {
                     Console.WriteLine($"\nBadge #{current_key} can already open that door.");
                     Input("Press enter/return ");
@@ -191,7 +190,7 @@ namespace Challenge_4
 
                 else
                 {
-                    badgerepo.AddValueToDict(current_key, new_door);
+                    BadgeRepository.AddValueToDict(current_key, new_door);
                     Console.WriteLine($"\nBadge #{current_key} can now open door #{new_door}.");
                     Input("Press enter/return ");
                     return;
@@ -200,22 +199,22 @@ namespace Challenge_4
         }
 
         // Takes away the ability for a badge to open a specific door
-        private void RemoveDoorFromBadgeOption()
+        private static void RemoveDoorFromBadgeOption()
         {
             int current_key = ChooseBadgeKey();
             Console.WriteLine(divider);
 
             Console.WriteLine($"Doors unlockable by Badge #{current_key}: ");
-            Console.WriteLine($"  {string.Join(", ", badgerepo.GetDictionary()[current_key])}");
+            Console.WriteLine($"  {string.Join(", ", BadgeRepository.GetDictionary()[current_key])}");
             Console.WriteLine();
 
             while (true)
             {
                 string to_remove = Input($"Which door# should badge #{current_key} not be able to access? ");
 
-                if (badgerepo.GetDictionary()[current_key].Contains(to_remove))
+                if (BadgeRepository.GetDictionary()[current_key].Contains(to_remove))
                 {
-                    badgerepo.RemoveValueFromDict(current_key, to_remove);
+                    BadgeRepository.RemoveValueFromDict(current_key, to_remove);
                     Console.WriteLine($"\nBadge #{current_key} can no longer open door #{to_remove}.");
                     Input("Press enter/return ");
                     return;
@@ -231,7 +230,7 @@ namespace Challenge_4
         }
 
         // Deletes a badge permanently
-        private void DeleteBadgeOption()
+        private static void DeleteBadgeOption()
         {
             int current_key = ChooseBadgeKey();
             Console.WriteLine(divider);
@@ -242,7 +241,7 @@ namespace Challenge_4
 
                 if (y_n.StartsWith("y"))
                 {
-                    badgerepo.RemoveKeyFromDict(current_key);
+                    BadgeRepository.RemoveKeyFromDict(current_key);
                     Console.WriteLine("\nYour badge has been deleted.");
                     Input("Press enter/return ");
                     return;
@@ -256,15 +255,15 @@ namespace Challenge_4
         }
 
         // Displays a list of badges along with all doors they can open
-        private void ViewAllBadgesOption()
+        private static void ViewAllBadgesOption()
         {
-            foreach(int key in badgerepo.GetDictionary().Keys)
+            foreach(int key in BadgeRepository.GetDictionary().Keys)
             {
                 Console.WriteLine($"Badge #{key}:");
 
-                if (badgerepo.GetDictionary()[key].Count > 0)
+                if (BadgeRepository.GetDictionary()[key].Count > 0)
                 {
-                    Console.WriteLine($"  Can Unlock {string.Join(", ", badgerepo.GetDictionary()[key])}");
+                    Console.WriteLine($"  Can Unlock {string.Join(", ", BadgeRepository.GetDictionary()[key])}");
                 }
 
                 else

@@ -1,29 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Challenge_5
 {
-    class ProgramUI
+    public static class ProgramUI
     {
-        CustomerRepository customerrepo = new CustomerRepository();
-        private readonly string divider = new string('-', 25);
+        private static readonly string divider = new string('-', 25);
 
-        public void Run()
+        public static void Run()
         {
             Console.WriteLine("Welcome to Komodo Insurance's telemarketing management system!");
             ChooseAnOption();
         }
 
-        public string Input(string prompt)
+        public static string Input(string prompt)
         {
             Console.Write(prompt);
             return Console.ReadLine();
         }
 
-        public void ChooseAnOption()
+        public static void ChooseAnOption()
         {
             while (true)
             {
@@ -50,7 +45,7 @@ namespace Challenge_5
                     {
                         Console.WriteLine(divider);
 
-                        if (customerrepo.GetList().Count > 0)
+                        if (CustomerRepository.GetList().Count > 0)
                         {
                             RemoveCustomerOption();
                         }
@@ -68,7 +63,7 @@ namespace Challenge_5
                     {
                         Console.WriteLine(divider);
 
-                        if (customerrepo.GetList().Count > 0)
+                        if (CustomerRepository.GetList().Count > 0)
                         {
                             UpdateCustomerOption();
                         }
@@ -86,7 +81,7 @@ namespace Challenge_5
                     {
                         Console.WriteLine(divider);
 
-                        if (customerrepo.GetList().Count > 0)
+                        if (CustomerRepository.GetList().Count > 0)
                         {
                             ViewCustomersOption();
                         }
@@ -108,12 +103,12 @@ namespace Challenge_5
             }
         }
 
-        private Customer ChooseACustomer(string action_text)
+        private static Customer ChooseACustomer(string action_text)
         {
             Console.WriteLine($"Choose a customer to {action_text}: ");
 
             int counter = 1;
-            foreach (Customer customer in customerrepo.GetList())
+            foreach (Customer customer in CustomerRepository.GetList())
             {
                 Console.WriteLine($"      [{counter}] {customer.FullName} ({customer.CustomerType})");
                 counter++;
@@ -123,14 +118,14 @@ namespace Challenge_5
             {
                 int input = int.Parse(Input("Input [#]: "));
 
-                if (!(input < 1) && !(input > customerrepo.GetList().Count))
+                if (!(input < 1) && !(input > CustomerRepository.GetList().Count))
                 {
-                    return customerrepo.GetList()[input - 1];
+                    return CustomerRepository.GetList()[input - 1];
                 }
             }
         }
 
-        private string ChooseCustomerType()
+        private static string ChooseCustomerType()
         {
             while (true)
             {
@@ -153,7 +148,7 @@ namespace Challenge_5
             }
         }
         
-        private void AddCustomerOption()
+        private static void AddCustomerOption()
         {
             string full_name = Input("What is the full name of this customer? ");
             string customer_type = ChooseCustomerType();
@@ -163,20 +158,20 @@ namespace Challenge_5
             new_customer.UpdateMessage();
             Console.WriteLine($"\nCustomer Email Message has been set to \"{new_customer.EmailMessage}\"");
 
-            customerrepo.AddCustomerToList(new_customer);
+            CustomerRepository.AddCustomerToList(new_customer);
             Console.WriteLine("\nYour customer has been added.");
             Input("Press enter/return ");
         }
 
-        private void RemoveCustomerOption()
+        private static void RemoveCustomerOption()
         {
-            customerrepo.RemoveCustomerFromList(ChooseACustomer("remove"));
+            CustomerRepository.RemoveCustomerFromList(ChooseACustomer("remove"));
             Console.WriteLine(divider);
             Console.WriteLine("Your customer has been removed.");
             Input("Press enter/return ");
         }
         
-        private void UpdateCustomerOption()
+        private static void UpdateCustomerOption()
         {
             Customer update_customer = ChooseACustomer("update");
             Console.WriteLine(divider);
@@ -195,11 +190,11 @@ namespace Challenge_5
             Input("Press enter/return ");
         }
 
-        private void ViewCustomersOption()
+        private static void ViewCustomersOption()
         {
             Console.WriteLine("List of customers: ");
 
-            foreach (Customer customer in customerrepo.GetList())
+            foreach (Customer customer in CustomerRepository.GetList())
             {
                 Console.WriteLine($"  {customer.FullName} ({customer.CustomerType})");
                 Console.WriteLine($"    Email Message: {customer.EmailMessage}");

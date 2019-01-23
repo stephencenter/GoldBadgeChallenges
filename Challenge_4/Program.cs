@@ -1,11 +1,10 @@
 ﻿namespace Challenge_4
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        internal static void Main()
         {
-            ProgramUI program_ui = new ProgramUI();
-            program_ui.Run();
+            ProgramUI.Run();
         }
     }
 }

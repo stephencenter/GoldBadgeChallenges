@@ -1,21 +1,22 @@
 ﻿using System.Collections.Generic;
 
-namespace Challenge_2 {
-    class ClaimRepository
+namespace Challenge_2
+{
+    public static class ClaimRepository
     {
-        private List<Claim> claim_list = new List<Claim>();
+        private static List<Claim> claim_list = new List<Claim>();
 
-        public void AddClaimToList(Claim new_claim)
+        public static void AddClaimToList(Claim new_claim)
         {
             claim_list.Add(new_claim);
         }
 
-        public void RemoveClaimFromList(Claim old_claim)
+        public static void RemoveClaimFromList(Claim old_claim)
         {
             claim_list.Remove(old_claim);
         }
 
-        public List<Claim> GetList()
+        public static List<Claim> GetList()
         {
             return claim_list;
         }

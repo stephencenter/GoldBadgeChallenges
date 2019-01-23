@@ -1,29 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Challenge_1
 {
-    class ProgramUI
+    public static class ProgramUI
     {
-        MenuRepository menurepo = new MenuRepository();
-        private string divider = new String('-', 25);
+        private static readonly string divider = new string('-', 25);
 
-        public void Run()
+        public static void Run()
         {
             Console.WriteLine("Welcome to Komodo Cafe's patented Menu Management System!");
             ChooseAnOption();
         }
 
-        public string Input(string prompt)
+        public static string Input(string prompt)
         {
             Console.Write(prompt);
             return Console.ReadLine();
         }
 
-        public void ChooseAnOption()
+        public static void ChooseAnOption()
         {
             while (true)
             {
@@ -47,7 +43,7 @@ namespace Challenge_1
 
                     if (choice == "2")
                     {
-                        if (menurepo.GetList().Count > 0)
+                        if (MenuRepository.GetList().Count > 0)
                         {
                             RemoveOption();
                         }
@@ -64,7 +60,7 @@ namespace Challenge_1
 
                     if (choice == "3")
                     {
-                        if (menurepo.GetList().Count > 0)
+                        if (MenuRepository.GetList().Count > 0)
                         {
                             ViewOptionSimple();
                         }
@@ -79,8 +75,9 @@ namespace Challenge_1
                         break;
                     }
 
-                    if (choice == "4") {
-                        if (menurepo.GetList().Count > 0)
+                    if (choice == "4")
+                    {
+                        if (MenuRepository.GetList().Count > 0)
                         {
                             ViewOptionVerbose();
                         }
@@ -97,13 +94,13 @@ namespace Challenge_1
 
                     if (choice == "5")
                     {
-                        System.Environment.Exit(1);
+                        Environment.Exit(1);
                     }
                 }
             }
         }
 
-        public void AddOption()
+        public static void AddOption()
         {
             Console.WriteLine(divider);
             Console.WriteLine("Let's add a menu item.");
@@ -115,19 +112,19 @@ namespace Challenge_1
             List<string> ingredients = AddIngredients();
             Console.WriteLine(divider);
 
-            menurepo.AddMenuItem(new MenuItem(name, desc, price, ingredients));
+            MenuRepository.AddMenuItem(new MenuItem(name, desc, price, ingredients));
 
             Console.WriteLine($"{name} has been added to the menu.");
             Input("Press enter/return ");
         }
 
-        public void RemoveOption()
+        public static void RemoveOption()
         {
             Console.WriteLine(divider);
             Console.WriteLine("Choose a menu item: ");
 
             int counter = 1;
-            foreach (MenuItem menu_item in menurepo.GetList())
+            foreach (MenuItem menu_item in MenuRepository.GetList())
             {
                 Console.WriteLine($"      [{counter}] {menu_item.Name}");
                 counter++;
@@ -144,13 +141,13 @@ namespace Challenge_1
                     return;
                 }
 
-                if (chosen_num > menurepo.GetList().Count || chosen_num < 0)
+                if (chosen_num > MenuRepository.GetList().Count || chosen_num < 0)
                 {
                     continue;
                 }
 
-                MenuItem removed_item = menurepo.GetList()[chosen_num];
-                menurepo.RemoveMenuItem(removed_item);
+                MenuItem removed_item = MenuRepository.GetList()[chosen_num];
+                MenuRepository.RemoveMenuItem(removed_item);
 
                 Console.WriteLine(divider);
                 Console.WriteLine($"{removed_item.Name} has been removed.");
@@ -158,14 +155,14 @@ namespace Challenge_1
                 return;
             }
         }
-        
-        public void ViewOptionSimple()
+
+        public static void ViewOptionSimple()
         {
             Console.WriteLine(divider);
             Console.WriteLine("Komodo Cafe Menu: ");
 
             int counter = 1;
-            foreach (MenuItem menu_item in menurepo.GetList())
+            foreach (MenuItem menu_item in MenuRepository.GetList())
             {
                 Console.WriteLine($"  #{counter}: {menu_item.Name} | 1 @ ${menu_item.Price}");
                 counter++;
@@ -174,13 +171,13 @@ namespace Challenge_1
             Input("\nPress enter/return when you're done reading the menu ");
         }
 
-        public void ViewOptionVerbose()
+        public static void ViewOptionVerbose()
         {
             Console.WriteLine(divider);
             Console.WriteLine("Komodo Cafe Menu: ");
 
             int counter = 1;
-            foreach (MenuItem menu_item in menurepo.GetList())
+            foreach (MenuItem menu_item in MenuRepository.GetList())
             {
                 Console.WriteLine($"  #{counter}: {menu_item.Name} | 1 @ ${menu_item.Price}");
                 Console.WriteLine($"    \"{menu_item.Description}\"");
@@ -195,10 +192,10 @@ namespace Challenge_1
                 counter++;
             }
 
-            Input("\nPress enter/return when you're done reading the menu ");
+            Input("Press enter/return when you're done reading the menu ");
         }
 
-        public List<string> AddIngredients()
+        public static List<string> AddIngredients()
         { 
             List<string> ingredient_list = new List<string>();
 
@@ -212,12 +209,12 @@ namespace Challenge_1
                     continue;
                 }
 
-                else if (ingredient.ToLower() == "done" && ingredient_list.Count() > 0)
+                else if (ingredient.ToLower() == "done" && ingredient_list.Count > 0)
                 {
                     return ingredient_list;
                 }
 
-                else if (ingredient.ToLower() == "done" && ingredient_list.Count() == 0)
+                else if (ingredient.ToLower() == "done" && ingredient_list.Count == 0)
                 {
                     Console.WriteLine();
                     Console.WriteLine("You need at least one ingredient.");

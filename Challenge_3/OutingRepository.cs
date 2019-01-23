@@ -2,16 +2,16 @@
 
 namespace Challenge_3
 {
-    class OutingRepository
+    public static class OutingRepository
     {
-        private List<Outing> outing_list = new List<Outing>();
+        private static List<Outing> outing_list = new List<Outing>();
 
-        public List<Outing> GetList()
+        public static List<Outing> GetList()
         {
             return outing_list;
         }
 
-        public void AddOutingToList(Outing new_outing)
+        public static void AddOutingToList(Outing new_outing)
         {
             outing_list.Add(new_outing);
         }

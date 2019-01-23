@@ -3,25 +3,24 @@ using System.Linq;
 
 namespace Challenge_2
 {
-    class ProgramUI
+    public static class ProgramUI
     {
-        ClaimRepository claimrepo = new ClaimRepository();
-        private readonly string divider = new string('-', 25);
+        private static readonly string divider = new string('-', 25);
 
-        public void Run()
+        public static void Run()
         {
             Console.WriteLine("Welcome to the Komodo Claims Department!");
             ChooseAnOption();
         }
 
-        public string Input(string prompt)
+        public static string Input(string prompt)
         {
             // Custom method for output and input in one line
             Console.Write(prompt);
             return Console.ReadLine();
         }
 
-        public void ChooseAnOption()
+        public static void ChooseAnOption()
         {
             while (true)
             {
@@ -46,7 +45,7 @@ namespace Challenge_2
                     if (choice == "2")
                     {
                         Console.WriteLine(divider);
-                        if (claimrepo.GetList().Count > 0)
+                        if (ClaimRepository.GetList().Count > 0)
                         {
                             AddressClaimOption();
                         }
@@ -63,7 +62,7 @@ namespace Challenge_2
                     if (choice == "3")
                     {
                         Console.WriteLine(divider);
-                        if (claimrepo.GetList().Count > 0)
+                        if (ClaimRepository.GetList().Count > 0)
                         {
                             ViewClaimOption();
                         }
@@ -86,7 +85,7 @@ namespace Challenge_2
             }
         }
 
-        private void EnterNewClaimOption()
+        private static void EnterNewClaimOption()
         {
             // Gather information from user
             int ClaimID = int.Parse(Input("Give this Claim an ID#: "));
@@ -98,7 +97,7 @@ namespace Challenge_2
 
             // Create a new claim object using user input and add it to the claim list
             Claim new_claim = new Claim(ClaimID, ClaimType, Description, ClaimAmount, DateOfIncident, DateOfClaim);
-            claimrepo.AddClaimToList(new_claim);
+            ClaimRepository.AddClaimToList(new_claim);
 
             Console.WriteLine($"This claim is {(new_claim.IsValid ? "" : "not ")}valid.");
 
@@ -107,9 +106,9 @@ namespace Challenge_2
             Input("Press enter/return ");
         }
 
-        private void AddressClaimOption()
+        private static void AddressClaimOption()
         {
-            Claim current_claim = claimrepo.GetList()[0];
+            Claim current_claim = ClaimRepository.GetList()[0];
             Console.WriteLine($"The next claim in the queue is claim #{current_claim.ClaimID}.");
             Console.WriteLine("Here are the details for this claim:");
             Console.WriteLine($"Claim Type: {current_claim.ClaimType}");
@@ -126,7 +125,7 @@ namespace Challenge_2
 
                 if (input.StartsWith("y"))
                 {
-                    claimrepo.RemoveClaimFromList(current_claim);
+                    ClaimRepository.RemoveClaimFromList(current_claim);
                     Console.WriteLine("Your claim has been dealt with!");
                     Input("Press enter/return ");
                     return;
@@ -139,7 +138,8 @@ namespace Challenge_2
             }
         }
 
-        private void ViewClaimOption() {
+        private static void ViewClaimOption()
+        {
             // Most of this is just setup so the text is all aligned properly. I couldn't find a simple way to do this so here's what I went with.
             string header1 = "Claim ID#";
             string header2 = "Claim Type";
@@ -148,11 +148,11 @@ namespace Challenge_2
             string header5 = "Date of Claim";
 
             // Get the number of spaces to pad each item with
-            int padding_1 = Math.Max(claimrepo.GetList().Max(t => t.ClaimID.ToString().Count()), header1.Count());
-            int padding_2 = Math.Max(claimrepo.GetList().Max(t => t.ClaimType.Count()), header2.Count());
-            int padding_3 = Math.Max(claimrepo.GetList().Max(t => t.Description.Count()), header3.Count());
-            int padding_4 = Math.Max(claimrepo.GetList().Max(t => t.DateOfIncident.ToString("MM/dd/yyyy").Count()), header4.Count());
-            int padding_5 = Math.Max(claimrepo.GetList().Max(t => t.DateOfClaim.ToString("MM/dd/yyyy").Count()), header5.Count());
+            int padding_1 = Math.Max(ClaimRepository.GetList().Max(t => t.ClaimID.ToString().Count()), header1.Count());
+            int padding_2 = Math.Max(ClaimRepository.GetList().Max(t => t.ClaimType.Count()), header2.Count());
+            int padding_3 = Math.Max(ClaimRepository.GetList().Max(t => t.Description.Count()), header3.Count());
+            int padding_4 = Math.Max(ClaimRepository.GetList().Max(t => t.DateOfIncident.ToString("MM/dd/yyyy").Count()), header4.Count());
+            int padding_5 = Math.Max(ClaimRepository.GetList().Max(t => t.DateOfClaim.ToString("MM/dd/yyyy").Count()), header5.Count());
 
             // Print the header
             Console.Write(header1);
@@ -178,7 +178,7 @@ namespace Challenge_2
             Console.WriteLine("Valid?");
 
             // Print the claims
-            foreach (Claim claim in claimrepo.GetList())
+            foreach (Claim claim in ClaimRepository.GetList())
             {
                 Console.Write(claim.ClaimID);
                 Console.Write(new string(' ', padding_1 - claim.ClaimID.ToString().Count()));

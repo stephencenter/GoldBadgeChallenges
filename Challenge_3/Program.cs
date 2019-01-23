@@ -1,10 +1,10 @@
 ﻿namespace Challenge_3
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args) {
-            ProgramUI ui = new ProgramUI();
-            ui.Run();
+        internal static void Main()
+        {
+            ProgramUI.Run();
         }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System;
 
-namespace Challenge_2 {
-
-    class Claim {
+namespace Challenge_2
+{
+    public class Claim
+    {
         public int ClaimID { get; set; }
         public string ClaimType { get; set; }
         public string Description { get; set; }
